@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+console.log("variable")
+
+let fn = function(){
+    console.log("fn...")
+}
+
+fn();
+
+let stop = () =>{console.log("stop");}
+stop();
+
+function display(){
+    console.log("display");
+}
+
+let dp =display;
+display();
+dp();
+
+stop = (x,y)=>1000+x+y;
+console.log(stop(5,3));
+
+
+
+</script>
+
+<body>
+    variable
+</body>
+</html>

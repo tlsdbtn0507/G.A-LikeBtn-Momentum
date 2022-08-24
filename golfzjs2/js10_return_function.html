@@ -17,35 +17,28 @@
         console.log(result);
         
         console.log("=====================");
-        
+
         function start(){
             console.log("start")
-            let count = 0;
+            // return 11;
+            // return "kim";
+            // return ["kim","kim","kim","kim"];
+            // return{name:"kim",age:33};
+            // return function(){
+            //     console.log("fn")
+            // } 
             return (x)=>{
-                ++count;
-                console.log("fn",x,count)
+                console.log("fn",x)
             }; 
-        }
+       }
         
         let rs = start();
         console.log(rs);
         rs(100);
-        rs(99);
-        rs(88)
-        rs(77);
-
-        console.log("=====================");
-
-        start()();//start 함수 안에 fn을 출력하는 함수를 출력한 것
-        //  start()에()만 붙이면 됨
-        start()(11)
-        start()(22)
-        start()(33)
-        start()(44)
 </script>
 </head>
 <body>
-    <h3>return function2</h3>
+    <h3>return function</h3>
 </body>
 </html>
 //함수는 콜 한곳으로 바로 날라감

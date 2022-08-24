@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    let arr = [1,2,3];
+
+    let arr_map=arr.map((item)=>{
+        console.log(item);
+        return item*100;
+    });
+    console.log(arr_map);
+
+    const names = [
+        'yangssem',
+        'kim',
+        'lee',
+        'john'
+        ];
+let arr_names_length =names.map(name => name.length);
+console.log(names.map(name => name.length));
+
+let arr_names_hello =names.map(name => "hello"+name);
+console.log(arr_names_hello);
+
+console.log("======================")
+arr = [,1,2,3,4,5,];
+let arr_even= arr.filter(item=>item%2==0);
+console.log(arr_even);
+
+let arr_min_names = names.filter(name=>name.length<4);
+console.log(arr_min_names);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
