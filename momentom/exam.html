@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#nav ul {
+			list-style: none;
+			margin:0;
+		}
+		#nav li {
+			width: 120px;
+			background-color:rgb(193, 199, 184);
+			display:block;
+			float:left;
+			margin-right:7px;
+			border:1px solid #777;
+		}
+		#nav a {
+			color:#fff;
+			display:block;
+			font-weight:bold;
+			padding:5px;
+			text-decoration:none;
+			text-align: center;
+		}
+		#nav li:hover {
+			background-color:#24b3ff;
+		}
+	</style>
+	<script>
+		a=10;
+		console.log(a);
+	</script>
+</head>
+<body>
+	<h3 id="top">test01_a.html</h3>
+
+	<div id="nav">
+		<ul>
+			<li><a href="test01_next.html">nextPage</a></li>
+			<li><a href="http://naver.com">naver</a></li>
+			<li><a href="#java">java란?</a></li>
+			<li><a href="#html">HTML이란?</a></li>
+		</ul>
+	</div>
+	<hr><hr><hr><hr><hr>
+	<ul>
+		<li><a href="test01_next.html">nextPage</a></li>
+		<li><a href="http://naver.com">naver</a></li>
+		<li><a href="#java">java란?</a></li>
+		<li><a href="#html">HTML이란?</a></li>
+	</ul>
+	<ol>
+		<li><a href="test01_next.html">nextPage</a></li>
+		<li><a href="http://naver.com">naver</a></li>
+		<li><a href="#java">java란?</a></li>
+		<li><a href="#html">HTML이란?</a></li>
+	</ol>
+	
+	<hr>
+	<a href="test01_next.html#java">다음페이지..java란?</a>
+	<a href="test01_next.html#html">다음페이지..HTML이란?</a>
+
+	<h1 id="java">java란?</h1>
+	<p>	
+		Hello java!!<br>
+		Hello java!!<br>
+		Hello java!!<br>
+	</p>
+	<pre>
+		Hello java!!
+		Hello java!!
+		Hello java!!
+	</pre>
+
+	<p>Hello java!! Hello java!! Hello java!!</p>
+
+	<h1 id="html">HTML이란?</h1>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+
+	<hr>
+	<a href="#top">top</a>
+</body>
+</html>

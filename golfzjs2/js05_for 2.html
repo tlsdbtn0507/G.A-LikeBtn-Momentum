@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:nth-child(odd){
+            color:brown
+        }
+        
+    /* odd는 홀수  */
+    </style>
+    <script>
+        console.log("hello for");
+
+        window.onload = function(){
+            let txt = "";
+            for (let i = 0; i < 10; i++) {
+            console.log(i);
+            txt+=i;
+        }
+        console.log(txt);
+        let arr = document.querySelector("#arr")
+        arr.innerHTML=txt;
+        let txt1 ="";
+                for (let i = 0; i < 10; i++) {
+                    console.log(i);
+                    txt1+=i;
+        }
+        console.log(txt1);
+        let cero = document.querySelector("#cero")
+        let cnt="";
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                // cnt += "<span>"+i+"</span>" 은 옆으로 촤라락       
+                cnt += "<p>"+i+"</p>"        
+                // cnt += "<h3>"+i+"</h3>" p보다 굵은 글씨로 아래로 촤라락    
+            }
+        cero.innerHTML =cnt;
+    };
+    </script>
+</head>
+<body>
+    <h3 id="arr">for</h3>
+    <div id="cero">
+        
+    </div>
+</body>
+</html>

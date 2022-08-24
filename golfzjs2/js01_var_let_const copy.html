@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('hello');//body에 관여 x
+
+        var a = 10;
+        console.log(a);
+        var a = 100;
+        console.log(a);
+
+        console.log("kor:"+kor);
+
+        if (true) {
+            console.log("name:"+name2);
+            var kor = 99;
+        }
+        var name2 = "kim";
+
+        let b =10;
+        // let b ; 해도 20으로 나옴
+        // let b = 20;//var과 다르게 let은 오류남
+        b = 20;//값변경은 가능
+        console.log(b);
+
+        if ("kim") {
+            console.log("Hello:"+b);
+            // console.log("eng:"+eng); errorr
+            let math = 77;
+            console.log("math:"+math);
+        }
+
+        let eng =88;
+
+        const c = "aaa";//상수여서 항상 초기화 해야함 java final
+        // const c = 'aaa';// let처럼 같은 변수 선언 불가
+        // c='lee'; 읽기 전용이라 수정 x 에러남 
+        console.log(c);
+        
+        
+        // if (true) {
+        //     console.log("x1:"+x);
+        //     console.log("y:"+y);
+            
+        // }
+        // // var x=10; 여기 있으면 
+        // y=1000;
+        // var x;
+        sleep();
+        function sleep() {
+            x=10;
+            console.log("x2:"+x);
+        }
+        sleep();
+        
+        console.log("x3:"+x);
+
+    </script>
+
+</head>
+<body>
+    <h1>var let const</h1>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello operator");
+        //1.산술 +-* / %
+        var a= 10;
+        var b = 20;
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a*b);
+        console.log(a/b);
+        console.log(a%b);
+
+
+
+        //2.할당,대입,복합할당 = += -=
+        
+        var c = 100;
+        console.log(c);
+
+       
+        c+=1000;
+        console.log(c);
+        
+        c-=1;
+        console.log(c);
+        
+        c+=1;
+        console.log(c);
+
+
+
+        //3.비트연산 & \ ^
+        
+        console.log(10&3);
+        console.log(10|3);
+        console.log(10^3);
+        console.log(~10);
+        
+        
+        
+        //4.비교 == != > < >= <=
+        var d = 5;
+        var e = 5;
+        console.log(d==e);
+        console.log(d!=e);
+        console.log(d<e);
+        console.log(d>e);
+        console.log(d<=e);
+        console.log(d>=e);
+        console.log("kim"=="kim");
+
+
+
+        //5.증강연산 ++ --
+
+        var f = 1000;
+
+        f ++ ;
+        console.log(f);
+
+        f--;
+        console.log(f);
+
+
+        //6.논리연산 && ||
+        
+        console.log(true&&true);
+        console.log(false&true);
+        console.log(false&&true);
+        console.log(true||false);
+        console.log(true|false);
+        console.log("=================");
+        console.log(false||false);
+        console.log(true||false);
+        console.log(false||true);
+
+        let name = "yang";
+        let x = name || "lee";
+        console.log("x:"+x);
+
+        function test(params) {
+            params = params||0;
+            console.log(params);
+        }
+        test(111);
+
+
+        function test2(params) {
+            params = params||[1,2,3];
+            console.log("bbb:"+params[0]);
+        }
+        test2();
+        test2([44,55,66]);
+
+
+        // //7.삼항연산 ?
+        // console.log(true? "kim":"lee");
+        // console.log(0 ? "kim":"lee");
+        // console.log(true?100:0);
+        // console.log(false?100:0);
+
+        // var bool=true;
+        // console.log(bool?100:0);
+
+        // var min=60;
+		// console.log(min<60 ?"no":"good");
+		
+		// var total=89+78+95;
+		// var avg= total/3.0;
+		// console.log(
+		// 		avg>=90? "A":
+		// 			avg>=80 ?"b":
+		// 				avg>=70 ?"c":"d");
+		
+		// var grade=avg>=90? "A":
+		// 	avg>=80 ?"b":
+		// 		avg>=70 ?"c":"d";
+
+        //8.ecma2020 : ?. , ?? , ??=
+        let user = {name:{first:"didier",last:"drogba"}};
+        console.log(user.name.first);//undefined
+        console.log(user.address);//undefined
+        console.log(user.addres.street);//undefined
+        console.log(user.address?.street);//undefined
+        console.log(ser.address?.street||"ori");//undefined
+    </script>
+</head>
+<body>
+    <h1>operator</h1>
+</body>
+</html>

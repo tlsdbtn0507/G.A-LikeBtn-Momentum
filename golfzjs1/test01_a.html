@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="test03.css">
+	
+	
+	<!-- javascript는 ; 없어도 실행 가능 java의 sys가 여기선 console.log/ 밑에 꾸며줄 대상이 없으면 오류발생 -->
+	<!-- javascript의 변수는 보통 var로 고정 -->
+	<!-- <style>은 css문법 박스안에 a들 넣는거 / 밑에 꾸며줄 대상이 없더라도 오류 x-->
+	<!-- 약간 노란색이 속성, 따옴표 안에는 벨류 -->
+</head>
+
+<body>
+	<h3 id="top">test01_a.html</h3>
+
+
+	<div id="nav">
+		<ul>
+			<li class="top_menu"><a href="test01_next.html">nextpage</a></li>
+			<li class="top_menu"><a href="https://www.naver.com/">naver</a></li>
+			<li class="top_menu"><a href="#java">java란?</a></li>
+			<li class="top_menu"><a href="#html">html이란?</a></li>
+		</ul>
+	</div>
+	<!-- nav에 id, div를 이용해서 위에 4개만 적용 -->
+	<br>
+	<br>
+	<div id="nav1">
+		<ul>
+			<li><a href="test01_next.html">nextpage111</a></li>
+			<li><a href="https://www.naver.com/">naver111</a></li>
+			<li><a href="#java">java란?</a></li>
+			<li><a href="#html">html이란?</a></li>
+		</ul>
+	</div>
+	<br>
+	<br>
+	<div id="nav2">
+		<ul>
+
+			<li><a href="test01_next.html">nextpage</a></li>
+			<li><a href="https://www.naver.com/">naver</a></li>
+			<li><a href="#java">java란?</a></li>
+			<li><a href="#html">html이란?</a></li>
+		</ul>		
+	</div>
+	<!-- ol은 순서를 붙여서 번호순으로 나오게함 -->
+	<br>
+	<br>
+	<div id="nav3">
+		<li><a href="test01_next.html#java">다음페이지..java란?</a></li>
+	</div>
+	<br>
+	<a href="test01_next.html#html">다음페이지..html이란?</a>
+	<!-- #앞에 주소 달아서 이동 가능,#이 붙으면id/.은 class -->
+	<!-- h1테그는 줄하나 다잡아먹음(헤드라인이라서) -->
+	<!-- id로 바로 찾아가는 능력 -->
+	<h1 id="java">java란?</h1>
+	<p>
+		Hello java!!<br>
+		Hello java!!<br>
+		Hello java!!
+	</p>
+	<p>
+		Hello java!!<br>
+		Hello java!!<br>
+		Hello java!!</p>
+	<pre>
+		Hello java!!
+		Hello java!!
+		Hello java!!</pre>
+	<!-- p는 엔터를 아무리 쳐도 적용 x -->
+	<!-- 엔터를 치려면br해야함 -->
+	<!-- pre를 쓰면 코딩한대로 나올수 잇음(잘안씀) -->
+	<h1 id="html">html이란?</h1>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+	<p>Hello html!!Hello html!!Hello html!!</p>
+	<!-- 바디 안에는 수많은 속성이 존재 그중 대표적인게 id/ p는 문장을 담음 -->
+
+	<hr>
+	<!-- hr은 줄긋는거 -->
+	<a href="test01_a.html#top">top</a>
+</body>
+
+</html>

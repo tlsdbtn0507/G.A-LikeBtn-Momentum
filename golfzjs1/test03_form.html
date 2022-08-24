@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼놀이</title>
+    <script>
+        var a =10;
+        console.log(a);
+
+        window.onload = function(){
+            // var btn_idCheck = document.getElementById("btn_idCheck");
+            var btn_idCheck = document.querySelector("#btn_idCheck");
+            // #쓰면 id를 지워야 해서 querySelector 혹은 라이브러리가 있으면
+            //&를 써야함
+            console.log(btn_idCheck);
+            btn_idCheck.onclick = function (event){
+                console.log("onclick");
+                event.preventDefault();
+                event.stopPropagation();
+            };
+            // function(){}:java의 annonymous생각하면댐
+        };
+        
+    </script>
+</head>
+<!-- script는 헤드 바디 어디던 존재가능
+하지만 기능을 하기 위해선 해당 코드 아래에 있어야함 -->
+<body>
+    <h1>Login</h1>
+    <form action="loginOk.do" method="post">
+            <!-- form에 get과 post있는데 전송방식을 뭐로할지 고르는것 
+            디폴트는 겟 근데 겟으로 하면 메소드 겟이뜸 
+            post는 전송량도 많고 아이디 패스워드에 대한 보안성이 높음-->
+            <label for="id">ID:</label><input type="text" placeholder="login_ID" id="login_id" name="login_id" value="admin"><br>
+            <label for="pw">PW:</label><input type="password" placeholder="login_PW" id="login_pw" name="login_pw" value="hi1234" ><br>
+            <input type="submit" value="로그인" >
+    </form>
+    <h1>회원가입</h1>
+    <form action="insertOk.do" method="post">
+        <label for="id">ID:</label><input type="text" placeholder="ID를입력하세요" name="id" value="">
+        <button id="btn_idCheck">중복체크</button><br>
+        <label for="pw">PW:</label><input type="password" placeholder="PW를입력하세요" name="pw" value=""><br>
+        <label for="name">NAME:</label> <input type="text" placeholder="NAME을입력하세요" name="name" value=""><br>
+        <label for="">TEL:</label> <input type="tel" placeholder="TEL을입력하세요" name="tel" value=""><br>
+        <input type="submit" value="회원가입">
+    </form>
+    <!-- <script>
+        var a =100;
+        console.log(a);
+        var btn_idCheck = document.getElementById("btn_idCheck");
+        console.log(btn_idCheck);
+        원래 스크립트는 해당 이벤트 아래에 있어야 하지만 위처럼 하면 생략가능
+    </script> -->
+    <h1>추가정보</h1>
+    <form action="infoAddOk.do" method="post" enctype="multipart/form-data">
+        <label for="m">M:</label>  <input type="radio" id="m" name="m" value="m" checked><br>
+        <label for="f">F:</label> <input type="radio" id="f" name="f" value="f"><br>
+        <label for="hobby1">야구:</label> <input type="checkbox" class="hobby1" name="hobby1" value="baseball"><br>
+        <label for="hobby2">축구:</label> <input type="checkbox" class="hobby2" name="hobby2" value="soccer"><br>
+        <label for="hobby3">농구:</label> <input type="checkbox" class="hobby3" name="hobby3" value="basketball"><br>
+        <label for="hobby4">골프:</label> <input type="checkbox" class="hobby4" name="hobby4" value="golf"><br>
+        <label for="hobby5">게임:</label> <input type="checkbox" class="hobby5" name="hobby5" value="game"><br>
+        <label for="hobby6">독서:</label> <input type="checkbox" class="hobby6" name="hobby6" value="readingbook"><br>
+        <label for="hobby7">영화관람:</label> <input type="checkbox" class="hobby7" name="hobby7" value="watchingmovie"><br>
+        <label for="hobby8">헬스:</label> <input type="checkbox" class="hobby8" name="hobby8" value="workout"><br>
+        <label for="hobby9">드라이브:</label> <input type="checkbox" class="hobby9" name="hobby9" value="drive"><br>
+        <label for="pct">습득율:</label> <input type="range" id="pct" name="pct" value="30"><br>
+        <label for="birthday">생일:</label> <input type="date" id="birthday" name="birthday" value="2022-08-17"><br>
+        <label for="num">NUM:1</label> <input type="hidden" id="num" name="num" value="1"><br>
+        <!-- hidden은 표시는 해놔야하지만 입력할 필요가 없을때 씀 -->
+        <label for="file1">프로필이미지:</label> <input type="file" id="file1" name="file"><br>
+        <!-- 파일전송할 때 무조건 post + enctype="multipart/form-data" 해줘야함 -->
+        <input type="submit" value="추가">
+       
+    </form>
+</body>
+</html>

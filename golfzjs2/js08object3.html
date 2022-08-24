@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Hello Object...");
+
+        //[,,] : array  >>> new Array(5);
+        //{key:value,key:value,,,} : object >> new Object();
+        //생성자함수 객체
+        //class 선언
+
+        class Student{
+            kor = 99;//public ES2022
+            #tel = "010";//private ES2022
+            constructor(){
+                console.log("Student()...");
+                //this.name = "lee";//ES6
+                // this._email = "aaa@aaa.com";//ES6
+            }
+
+            study(){
+                console.log("study()...");
+                this.#yaja();
+            }
+
+            #yaja(){
+                console.log("#yaja()...");
+            }
+
+            firstTest(){
+                console.log("firstTest()...");
+                return 1;
+            }
+
+        }
+
+        let st = new Student();
+        st.num = 11;
+        console.log(st);
+        st.study();
+        console.log(st.study());//void : undefined
+        console.log(st.firstTest());//1
+        
+        
+        console.log("==========");
+        
+        class Person{
+            age = 33;
+            #weight = 55.5;
+            constructor(){
+                console.log("Person()...");
+            }
+
+            sleep(){
+                console.log("sleep()...");
+                this.#natJam();
+            }
+
+            #natJam(){
+                console.log("#natJam()...");
+            }
+
+            eat(food_name){
+                console.log("eat()...",food_name);
+                return [7,12,6];
+            }
+
+        }
+        let p = new Person();
+        p.name = "kim";
+        console.log(p.name,p.age);//weight는 은닉됨.
+        p.sleep();
+        let arr_eatTime = p.eat("je6BBokoom");
+        console.log(arr_eatTime);
+        for (const i in arr_eatTime) {
+            console.log(arr_eatTime[i]);
+        }
+
+        console.log("==========");
+
+        class Car{
+            constructor(){
+        }
+    }
+        let car = new Car();
+        car.start();
+    </script>
+</head>
+<body>
+    <h3>Object</h3>
+</body>
+</html>

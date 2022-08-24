@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <script>
+        window.onload = function(){
+            console.log("onload...");
+        };
+        console.log("==============================");
+        
+        var a = 10;// var가 없어도 10은 그대로 나오나 함수 안에 들어가면 완전히 달라지므로 var해주는 습관을 기르자
+        console.log(a);
+        console.log(typeof(a));
+        
+        // void = 타입이 없다 고로 undefined
+        //type of = 어떤 형식(숫자or문자)인지 보여줌
+        console.log("----------------------------------");
+       
+        var a = "kim";
+        // a ="lee"; //언제든 변경가능
+        console.log(a);
+        console.log(typeof(a));
+        // var는 변수를 중복해도 댐
+        // var function 은 파싱단계를 거침
+        console.log("----------------------------------");
+       
+        var a = 3.14;
+        console.log(a);
+        console.log(typeof(a));
+        console.log("----------------------------------");
+        
+        var b; //undefined, null자체도 안들어감
+        console.log(b);
+        console.log(typeof(b));
+        console.log("----------------------------------");
+        
+        var obj = null;//null이지만 타입은 object
+        console.log(obj);
+        console.log(typeof(obj));
+        console.log("----------------------------------");
+        
+        var arr = [];//[]해주면 배열
+        console.log(arr);
+        console.log(typeof(arr));
+        console.log("----------------------------------");
+
+        var vo = {};//{}해주면 object
+        console.log(vo);
+        console.log(typeof(vo));
+        console.log("----------------------------------");
+        
+        var fn = function(){};//fn은 function이자 자.스에선 최상위
+        console.log(fn);
+        console.log(typeof(fn));
+        console.log("----------------------------------");
+        
+        var bool = true;//뻔하지만 boolean
+        console.log(bool);
+        console.log(typeof(bool));
+        console.log("----------------------------------");
+        
+        console.log(String(bool));//위에는 파랗지만 아래는 까맘 그이유는 스트링이라서
+        console.log(typeof(String(bool)));
+        console.log(typeof(String(333)));
+        console.log("----------------------------------");
+        
+        console.log(typeof(Number("123")));
+        console.log(typeof(Number(true)));// 타입으로 num화 해서 num 
+        console.log(typeof(Number("abc")));
+        console.log(typeof(NaN));
+        console.log(Number("abc"));
+        console.log("----------------------------------");
+        
+        console.log(Boolean("abc"));
+        console.log(Boolean(""));//자스는 불린에 ""속 아무것도 없으면 거짓
+        console.log(Boolean("             "));//스페이스는 참
+        console.log("---------------------------------");
+        console.log(Boolean(null));//false
+        console.log(Boolean({}));//true
+        console.log(Boolean(0));//false , 0만 아니면 참
+        console.log(Boolean(1000000));
+        console.log(Boolean(NaN));//NaN 역시 false
+        console.log(Boolean(undefined));//false
+        console.log("----------------------------------");
+
+
+        </script>
+    <!-- src랑 그냥 스크립트랑 완전히 다름 -->
+    
+</head>
+<body>
+    <h1>index page</h1>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좋아요</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="root">
+        <div v-if="liked">좋아요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">좋아요</button>
+        <!-- else-if로 바꿔서 얼마든지 늘릴수 잇음 대신 if else-if사이에 뭐가 들어오면 안됌 -->
+        <!-- 지금은 조건문 생각하듯이  -->
+        <!-- v가 붙은 속성 "" 안에 데어타나 메소드에 접근 가능 -->
+        
+    </div>
+</body>
+<script>
+    const app = new Vue ({
+        el: "#root",
+        data:{
+            liked: false,
+        },
+        methods:{
+            onClickButton(){
+                this.liked = true;
+            },
+        },
+    });
+    //vue의 장점: 데이터를 바꾸면 화면도 알아서 바뀐다
+    // 나중에 다른거 만들때도 좋아요와 다른건 바꿀수 잇지만 el,data,methods는 고정
+</script>
+</html>

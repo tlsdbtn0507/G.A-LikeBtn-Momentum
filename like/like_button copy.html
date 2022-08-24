@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정표현</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="root">
+        <div v-if="liked">좋아요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">좋아요</button>       
+    </div>
+    <div id="root1">
+        <div v-if="hated">싫어요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">싫어요</button>       
+    </div>
+    <div id="root2">
+        <div v-if="best">최고에요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">최고에요</button>       
+    </div>
+    <div id="root3">
+        <div v-if="angry">화나요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">화나요</button>       
+    </div>
+    <div id="root4">
+        <div v-if="sad">슬퍼요 눌렀음</div>
+        <button v-else v-on:click="onClickButton">슬퍼요</button>       
+    </div>
+</body>
+<script>
+    const app = new Vue ({
+        el: "#root",
+        data:{
+            liked: false,
+        },
+        methods:{
+            onClickButton(){
+                this.liked = true;
+            },
+        },
+    });
+    const app1 = new Vue ({
+        el: "#root1",
+        data:{
+            hated: false,
+        },
+        methods:{
+            onClickButton(){
+                this.hated = true;
+            },
+        },
+    });
+    const app2 = new Vue ({
+        el: "#root2",
+        data:{
+            best: false,
+        },
+        methods:{
+            onClickButton(){
+                this.best = true;
+            },
+        },
+    });
+    const app3 = new Vue ({
+        el: "#root3",
+        data:{
+            angry: false,
+        },
+        methods:{
+            onClickButton(){
+                this.angry = true;
+            },
+        },
+    });
+    const app4 = new Vue ({
+        el: "#root4",
+        data:{
+            sad: false,
+        },
+        methods:{
+            onClickButton(){
+                this.sad = true;
+            },
+        },
+    });
+
+</script>
+</html>

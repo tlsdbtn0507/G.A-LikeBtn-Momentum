@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div>{{first}}곱하기 {{second}}는?</div>
+        <!-- {}를 두번 하면 렌더링화 해서 화면에 표시할수 있음 -->
+        <form v-on:submit="onSubmitForm">
+            <input type="number" ref="answer" v-model = "value">
+            <!-- ref는 남용하면 안좋음 -->
+            <button type="submit">insert</button>
+            
+        </form>
+        <div id="result">{{result}}</div>
+    </div>
+    <script>
+        const app = new Vue({
+            el: "#root",
+            data:{
+                first: Math.ceil(Math.random() * 9) ,//num1
+                second:Math.ceil(Math.random() * 9),//num2
+                value:'',//answer
+                result:'',//result
+            },
+            methods:{
+                onSubmitForm(e){
+                    e.preventDefault();
+                    console.log(this);
+                    
+                    if (this.first *this.second===parseInt(this.value)) {
+                        this.result="정답";
+                        this.first = Math.ceil(Math.random()*9)
+                        this.second = Math.ceil(Math.random()*9)
+                        this.value="";
+                        this.$refs.answer.focus();
+                        // this.$refs.answer.value = '123'; 이런거는 하면 안댐
+                    } else {
+                        this.result="땡";
+                        this.value='';
+                        this.$refs.answer.focus();
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+</html>

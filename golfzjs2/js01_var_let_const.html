@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('hello');//body에 관여 x
+
+        var a = 10;
+        var a = 100;
+
+        let b =10;
+        // let b ; 해도 20으로 나옴
+        // let b = 20;//var과 다르게 let은 오류남
+        b = 20;//값변경은 가능
+        console.log(b);
+
+        const c = "aaa";//상수여서 항상 초기화 해야함 java final
+        // const c = 'aaa';// let처럼 같은 변수 선언 불가
+        // c='lee'; 읽기 전용이라 수정 x 에러남 
+        console.log(c);
+        
+    </script>
+
+</head>
+<body>
+    <h1>var let const</h1>
+</body>
+</html>

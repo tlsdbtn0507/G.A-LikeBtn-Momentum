@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        let avg = 80
+        let grade = "A";
+            if (avg>90) {
+                grade = "A"
+            } else if (avg>80) {
+                grade = "B";
+            }else if (avg>70) {
+                grade = "C";
+            } else {
+                grade = "F";
+            }
+        console.log("avg:"+avg);
+        console.log("grade"+grade);
+
+        let avg1 = document.querySelector("#avg1");
+        // console.log(avg1);
+            avg1.innerText = "<b>avg:</b>:"+avg;
+        
+        
+        let grade1 = document.querySelector("#grade1");
+        // console.log(avg1);
+            grade1.innerText = "grade:"+grade;
+        };
+        
+    </script>
+</head>
+<body>
+    <div>
+        <p id="avg1">i</p>
+        <p id="grade1">if-else</p>
+    </div>
+</body>
+</html>

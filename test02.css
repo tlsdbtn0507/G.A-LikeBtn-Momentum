@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(234, 255, 201);
+}
+h1{   
+        color: rgb(255, 139, 139);
+        text-align: center;
+}
+/* h1태그달린애 */
+table{
+    margin: auto;
+}
+/* table을 중앙으로 */
+table tr td{
+    width: 100px;
+    text-align: center;
+    /* background-color: rgb(151, 246, 246); */
+}
+table th{
+    background-color: rgb(255, 159, 255);
+    color: ghostwhite;
+}
+table tr:nth-child(odd){
+    background: rgb(201, 243, 255);
+}
+table tr:nth-child(even){
+    background: rgb(255, 201, 201);
+}
+col:nth-child(even){
+    background: rgb(255, 251, 188);
+}

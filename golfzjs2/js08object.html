@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("object")
+        //{key:value,key:value,....} = object
+
+        let obj = {};
+        console.log(obj)
+        obj = {
+            name:"kim",age:33,
+            arr:[11,22,33],
+            vo:{id:"admin"},
+            fn:function(){}};
+            // 오브젝트 안에 스트링(문자), 숫자 널 배열 ,함수 다들어감
+        console.log(obj)
+
+        obj = {};
+        console.log(obj);
+        obj["name"] = "lee";
+        console.log(obj);
+        console.log(obj["id:"]);
+        obj["id"] = "admin";
+        console.log(obj)
+        console.log(obj.name,obj.id);
+
+        obj.arr = [11,22,33];
+        console.log(obj);
+        for (const i in obj.arr) {//배열 안에 있는애들 세로로 뽑기
+            console.log(obj.arr[i]);
+        }
+
+        obj.sleep = function(){
+            console.log("sleep")
+        };
+        obj.sleep();
+
+        console.log("name" in obj) //obj라는 오브젝에 name이 있나?
+        console.log("name2" in obj)
+
+        //제거
+        delete obj.name;
+        console.log(obj);
+
+
+    </script>
+</head>
+<body>
+    <h1>object</h1>
+</body>
+</html>
